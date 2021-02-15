@@ -8,7 +8,6 @@ require("dotenv").config();
 
 module.exports.awake = () => {
   client.login(process.env.BOT_TOKEN);
-  setInterval(() => client.destroy(), 60000);
 };
 
 module.exports.listen = () => {
