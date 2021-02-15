@@ -8,7 +8,9 @@ require("dotenv").config();
 
 module.exports.awake = () => {
   client.login(process.env.BOT_TOKEN);
+};
 
+module.exports.listen = () => {
   client.on("message", (message) => {
     if (message.content.startsWith("!")) {
       commandHandler(message);
@@ -23,5 +25,5 @@ module.exports.awake = () => {
     reactionHandler(reaction, user, "remove");
   });
 
-  return { status: "Working" };
+  return { status: "Listening" };
 };

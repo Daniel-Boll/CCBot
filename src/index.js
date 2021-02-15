@@ -6,8 +6,10 @@ require("regenerator-runtime/runtime");
 
 const app = express();
 
+bot.awake();
+
 app.get("/", (_, res) => {
-  res.status(200).json(bot.awake());
+  res.status(200).json(bot.listen());
 });
 
 app.listen(process.env.PORT || 3000, () => {
