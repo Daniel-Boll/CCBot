@@ -1,4 +1,4 @@
-const channels = require("../channels.json");
+const channels = require("../../channels.json");
 
 module.exports = async (message, tokens) => {
   if (message.channel.id == channels.auth) {
