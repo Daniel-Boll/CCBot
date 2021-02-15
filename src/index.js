@@ -6,12 +6,8 @@ require("regenerator-runtime/runtime");
 
 const app = express();
 
-bot.awake();
-
 app.get("/", (_, res) => {
-  res.status(200).json({
-    message: "Discord bot working!",
-  });
+  res.status(200).json(bot.awake());
 });
 
 app.listen(process.env.PORT || 3000, () => {

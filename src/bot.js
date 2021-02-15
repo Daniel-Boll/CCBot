@@ -22,4 +22,6 @@ module.exports.awake = () => {
   client.on("messageReactionRemove", (reaction, user) => {
     reactionHandler(reaction, user, "remove");
   });
+
+  return { status: "Working" };
 };
