@@ -22,6 +22,9 @@ module.exports = async (message, tokens) => {
     );
     message.member.roles.add(role);
 
+    message.react("👌");
+    message.react("😍");
+
     return message.channel.send({
       embed: {
         color: "GREEN",

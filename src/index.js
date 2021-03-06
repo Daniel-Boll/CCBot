@@ -4,6 +4,8 @@ const bot = require("./bot");
 require("core-js/stable");
 require("regenerator-runtime/runtime");
 
+require("dotenv").config();
+
 const app = express();
 
 bot.awake();
