@@ -1,4 +1,11 @@
-module.exports = (message, tokens) => {
+const {
+  firstYear,
+  secondYear,
+  thirdYear,
+  forthYear,
+} = require("../constants/subjects");
+
+module.exports = async (message, tokens) => {
   /*
                  (__) 
                  (oo) 
@@ -9,10 +16,20 @@ module.exports = (message, tokens) => {
 ..."Have you mooed today?"...
   */
 
-  return message.channel.send({
-    embed: {
-      color: "RED",
-      description: `Procurando o que, amigo?`,
-    },
-  });
+  // const ID = 817783042100691005;
+
+  // const channel = message.channel.guild.channels.cache.find(
+  //   (ch) => ch.name === "bot-testing"
+  // );
+
+  // console.log(
+  //   await channel.messages.fetch(ID).then((message) => message.content)
+  // );
+
+  // message.channel
+  //   .send(firstYear)
+  //   .then((embedMessage) => embedMessage.react("😀"));
+  // message.channel.send(secondYear);
+  message.channel.send(thirdYear);
+  message.channel.send(forthYear);
 };

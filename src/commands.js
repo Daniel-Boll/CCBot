@@ -1,8 +1,9 @@
 const nome = require("./commands/changeName");
 const cargo = require("./commands/roles");
 const test = require("./commands/test");
+const generateSubjects = require("./commands/generateSubjects");
 
-const commands = { nome, cargo, test };
+const commands = { nome, cargo, test, generateSubjects };
 
 module.exports = (message) => {
   const tokens = message.content.split(" ");
