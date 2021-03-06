@@ -14,7 +14,6 @@ module.exports.awake = () => {
 
 module.exports.listen = () => {
   client.on("message", (message) => {
-    console.log("message");
     if (message.content.startsWith("!")) {
       commandHandler(message);
     }
