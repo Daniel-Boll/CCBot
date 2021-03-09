@@ -44,5 +44,3 @@ client.on("messageReactionRemove", async (reaction, user) => {
   }
   reactionHandler(reaction, user, "remove");
 });
-
-return { status: "Listening" };
