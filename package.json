@@ -7,8 +7,8 @@
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build ./src -s",
     "build": "yarn clean && yarn build-babel",
-    "start": "yarn build && node ./build/index.js",
-    "dev": "node ./src/index.js"
+    "start": "yarn build && node ./build/bot.js",
+    "dev": "node ./src/bot.js"
   },
   "dependencies": {
     "@babel/core": "^7.12.9",
