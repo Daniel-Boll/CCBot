@@ -1,5 +1,3 @@
-require("core-js/stable");
-require("regenerator-runtime/runtime");
 require("dotenv").config();
 
 const Discord = require("discord.js");
@@ -11,6 +9,12 @@ const commandHandler = require("./commands");
 const reactionHandler = require("./reactions");
 
 client.login(process.env.BOT_TOKEN);
+
+// client.on("ready", () => {
+//   client.user.setActivity("https://github.com/Daniel-Boll/CCBotTeste", {
+//     type: "WATCHING",
+//   });
+// });
 
 client.on("message", (message) => {
   if (message.content.startsWith("!")) {
