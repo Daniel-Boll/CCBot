@@ -9,5 +9,9 @@ module.exports = (message) => {
   const tokens = message.content.split(" ");
   const command = tokens.shift().substring(1);
 
-  commands[command](message, tokens);
+  try {
+    commands[command](message, tokens);
+  } catch (err) {
+    console.error(err);
+  }
 };
